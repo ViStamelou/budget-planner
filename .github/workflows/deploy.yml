@@ -31,4 +31,5 @@ jobs:
         run: ng build --configuration=production --base-href="/budget-planner/"
 
       - name: Deploy to GitHub Pages
-        run: npx angular-cli-ghpages --dir=dist/budget-planner
+        run: npx angular-cli-ghpages --dir=dist
+
