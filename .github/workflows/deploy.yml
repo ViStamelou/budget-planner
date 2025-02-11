@@ -27,9 +27,14 @@ jobs:
       - name: Install Angular CLI
         run: npm install -g @angular/cli
 
+      - name: Clean dist folder
+        run: rm -rf dist  # Clean any old builds
+
       - name: Build Angular app
-        run: ng build --configuration=production --base-href="/"
+        run: ng build --configuration=production --base-href="/budget-planner/"
+
+      - name: List files in dist folder
+        run: ls -la dist/budget-planner  # Verify the build output
 
       - name: Deploy to GitHub Pages
-        run: npx angular-cli-ghpages --dir=dist/budget-planner
-
+        run: npx angular-cli-ghpages --dir=dist/budget-planner --no-silent
