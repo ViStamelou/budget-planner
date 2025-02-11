@@ -17,15 +17,15 @@ export class SideNavComponent {
     this.isSlideOut = !this.isSlideOut;
   }
   onDash(){
-    this.router.navigate(['/budget-planner/dashboard']);
+    this.router.navigate(['/dashboard']);
   }
   onProfile(){
-    this.router.navigate(['/budget-planner/profile']);
+    this.router.navigate(['/profile']);
   }
   onHistory(){
-    this.router.navigate(['/budget-planner/history']);
+    this.router.navigate(['/history']);
   }
   onLogout(){
-    this.router.navigate(['/budget-planner/login']);
+    this.router.navigate(['/login']);
   }
 }
