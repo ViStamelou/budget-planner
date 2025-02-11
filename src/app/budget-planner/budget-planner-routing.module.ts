@@ -10,6 +10,7 @@ import { HistoryComponent } from './history/history.component';
 import { ProfileComponent } from './profile/profile.component';
 
 const routes: Routes = [
+  {path:'',component:LoginComponent},
   {path:'login',component:LoginComponent},
   {path:'side-nav',component:SideNavComponent},
   {path:'dashboard',component:DashboardComponent},
