@@ -28,21 +28,16 @@ jobs:
         run: npm install -g @angular/cli
 
       - name: Clean dist folder
-        run: rm -rf dist  # Clean any old builds
+        run: rm -rf dist
 
       - name: Build Angular app
         run: ng build --configuration=production --base-href="/budget-planner/"
 
-      - name: List files in dist folder
-        run: ls -la dist/budget-planner  # Verify the build output
-
-      - name: Configure Git
-        run: |
-          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git config --global user.name "GitHub Actions"
+      - name: Rename index.csr.html to index.html
+        run: mv dist/budget-planner/browser/index.csr.html dist/budget-planner/browser/index.html
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}  # Use the default GitHub token
-          publish_dir: ./dist/budget-planner/browser  # Path to the built Angular app
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist/budget-planner/browser
