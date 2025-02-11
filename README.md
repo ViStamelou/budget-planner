@@ -1,6 +1,6 @@
 # BudgetPlanner
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.2.
+BudgetPlanner is a web application designed to help users manage their finances efficiently. Built with Angular[Angular CLI](https://github.com/angular/angular-cli) version 18.1.2., it provides features for budgeting and tracking monthly expenses.
 
 ## Development server
 
