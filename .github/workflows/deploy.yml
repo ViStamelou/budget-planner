@@ -37,4 +37,4 @@ jobs:
         run: ls -la dist/budget-planner  # Verify the build output
 
       - name: Deploy to GitHub Pages
-        run: npx angular-cli-ghpages --dir=dist/budget-planner --no-silent
+        run: npx angular-cli-ghpages --dir=dist/budget-planner/browser --no-silent
